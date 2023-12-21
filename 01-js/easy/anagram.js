@@ -5,6 +5,23 @@
 */
 
 function isAnagram(str1, str2) {
+  if(str1.length!=str2.length){
+    return false;
+  }
+  let flag=false;
+  for(let i=0;i<str1.lenght;i++){
+    flag=false;
+    for(let j=0;j<str2.lenght;j++){
+      if(str1[i]==str2[j]){
+        flag=true;
+        break;
+      }
+    }
+    if(flag==false){
+      return false;
+    }
+  }
+  return true;
 
 }
 
